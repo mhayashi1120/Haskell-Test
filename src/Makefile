@@ -5,3 +5,6 @@ test: all
 all:
 	ghc Hoge.hs
 
+clean:
+	rm *.hi
+	rm *.o
