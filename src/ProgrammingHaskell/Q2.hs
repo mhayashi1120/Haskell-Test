@@ -1,7 +1,9 @@
 module Q2 () where
 
 -- a1
-aa = ((2 ^ 3) * 4)
+aa = (( 2 ^ 3 ) * 4)
+bb = (( 2 * 3 ) + ( 4 * 5 ))
+cc = ( 2 + ( 3 * ( 4 ^ 5 )))
 
 -- a2
 
@@ -15,15 +17,16 @@ n = a `div` length xs
 
 -- a4
 
+last2 :: [a] -> a
+last2 [x] = x
+last2 (x:xs) = last2 xs
 
 -- a5
 
-last2 :: [a] -> a
-last2 [x] = x
-last2 (x:xs) = last xs
-
-double x = x + x
-quadruple x = double (double x)
+init2 :: [a] -> [a]
+init2 [] = []
+init2 (x:xs) = reverse $ tail $ reverse $ x:xs
 
 -- head2 :: [a] -> a
-head2 [x:xs] = x
+head2 (x:xs) = x
+
