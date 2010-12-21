@@ -29,6 +29,9 @@ nth :: [Int] -> Int -> Int
 nth [] n = -1
 nth (x:_) 0 = x
 nth (_:xs) n =  nth xs (n - 1)
+
+inc n = n + 1
+
 -- nth (x:xs) n = if n == 0 then x else nth xs (n - 1)
 
 -- (^) :: Bool -> Bool -> Int
@@ -63,3 +66,4 @@ nth (_:xs) n =  nth xs (n - 1)
 -- aaa :: [a]
 -- aaa = tail [1,2,3]
 
+-- (map (\imp -> imp * 2) . filter (\imp -> if (mod imp  2) == 0 then True else False)) $ seq 10
