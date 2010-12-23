@@ -15,10 +15,12 @@ product2 [] = 1
 product2 (x:xs) = x * product xs
 
 -- a4
-qsort [] = []
-qsort (x:xs) = qsort larger ++ [x] ++ qsort smaller
-               where
-                 smaller = [a|a<-xs, a<=x]
-                 larger = [b|b<-xs, b>x]
+rqsort :: Ord a => [a] -> [a]
+rqsort [] = []
+rqsort (x:xs) = rqsort larger ++ [x] ++ rqsort smaller
+    where
+      smaller = [ a | a<-xs, a<=x ]
+      larger = [ b | b<-xs, b>x ]
+
 -- a5
 -- sort stability
